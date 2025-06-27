@@ -1,2 +1,14 @@
 # Unity-Multiplayer-Game-SOC-2025
-This repo contain the whole unity project for the multiplayer game i am working on.
+This repo contain the whole unity project for the multiplayer game i am working on.(Havent even decided what to name it)
+
+## Work Done
+- Basic Navigation to Game World
+- Player Movement
+- Player Combat Hitboxes
+- Player Follow Camera
+- Level Design
+
+## Future Work
+- Multiplayer setup
+- UI
+- Fixes
