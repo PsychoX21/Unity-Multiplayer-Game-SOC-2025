@@ -1,19 +1,150 @@
-# Unity-Multiplayer-Game-SOC-2025
+# KillStrike
 
-This repo contain the whole unity project for the multiplayer game i am working on.(Havent even decided what to name it)
+## Table of Contents
 
--   Note: Was getting some error uploading the assets folder, instead uploading the zipped folder
+1. [Project Overview](#project-overview)
+2. [Key Features](#key-features)
+3. [Technical Implementation](#technical-implementation)
+4. [Learning Journey](#learning-journey)
+5. [Common Multiplayer Development Challenges](#common-multiplayer-development-challenges)
+6. [Future Work](#future-work)
+7. [Conclusion](#conclusion)
+8. [Screenshots](#screenshots)
+9. [Game Controls](#game-controls)
 
-## Work Done
+## Project Overview <a name="project-overview"></a>
 
--   Basic Navigation to Game World
--   Player Movement
--   Player Combat Hitboxes
--   Player Follow Camera
--   Level Design
+This project is a multiplayer PvP melee combat game developed in Unity, featuring pixel art aesthetics and side-scroller gameplay. Set in a closed arena with multiple platforms, players engage in fast-paced combat using various moves including punches, kicks, dropkicks, and sword attacks. The game implements Unity's multiplayer services (Lobby, Relay) to facilitate online matchmaking and gameplay.
 
-## Future Work
+## Key Features <a name="key-features"></a>
 
--   Multiplayer setup
--   UI
--   Fixes
+-   **Network Architecture**:
+    -   Unity Lobby system for matchmaking
+    -   Unity Relay for secure P2P connections
+    -   Synchronized game state across all clients
+-   **Game Flow**:
+    -   Main menu with play, settings, and exit options (with confirmation popup)
+    -   Lobby system with public/private room creation and joining
+    -   Host privileges (player kicking, game initiation)
+    -   10-second combat lock period after second player joins
+    -   Real-time leaderboard tracking health/damage
+-   **Combat Mechanics**:
+    -   Diverse moveset: punches, kicks, dropkicks, sword attacks
+    -   Movement options: jumping, dashing, wall climbing
+    -   Health system with damage calculation
+-   **Robust Systems**:
+    -   Mid-game client join/leave handling
+    -   Resolution and audio settings persistence
+    -   Music and sound effects for all actions
+    -   Dynamic camera following players
+    -   Full controller support alongside keyboard input
+
+## Technical Implementation <a name="technical-implementation"></a>
+
+**Core Packages**:
+
+-   Unity Lobby - Matchmaking and room management
+-   Unity Relay - NAT traversal for P2P connections
+-   Netcode for GameObjects - Core networking framework
+-   Input System - Controller and keyboard input handling
+-   Cinemachine - Camera follow mechanism
+
+## Learning Journey <a name="learning-journey"></a>
+
+Coming from basic Pygame experience, this project represented a significant learning curve:
+
+1. **Unity Fundamentals**:
+
+    - Mastered Entity-Component-System architecture
+    - Learned Unity physics and animation systems
+
+2. **Multiplayer Networking**:
+
+    - Understood client-server vs P2P architectures
+    - Implemented synchronization techniques
+    - Mastered RPCs and NetworkVariables
+
+3. **Challenges Overcome**:
+    - **Synchronization**: Solved jittery movements through changing queue size
+    - **Relay Configuration**: Worked through NAT traversal challenges
+    - **Mid-game Joins**: Developed player state caching for late joiners
+    - **Camera System**: Created dynamic following with platform constraints
+
+## Common Multiplayer Development Challenges <a name="common-multiplayer-development-challenges"></a>
+
+1. **Network Synchronization**:
+
+    - Keeping game state consistent across clients
+    - Managing authority conflicts
+
+2. **Latency Compensation**:
+
+    - Implementing lag-tolerant combat systems
+    - Hit registration with ping variation
+
+3. **Session Management**:
+
+    - Handling player disconnections gracefully
+    - Implementing reconnection logic
+
+4. **Complex Debugging**:
+    - Reproducing network-specific bugs
+    - Diagnosing desynchronization issues
+    - Testing edge cases across multiple clients
+
+## Future Work <a name="future-work"></a>
+
+**Immediate Fixes**:
+
+-   Optimize network bandwidth usage
+-   Some sound effect related issues
+
+**New Features**:
+
+-   Character customization system
+-   Additional maps with interactive elements
+-   Special abilities and power-ups
+-   In-game text and voice chat
+
+**Technical Improvements**:
+
+-   Implement dedicated server support
+-   Add regional matchmaking
+-   Develop replay system
+-   Create spectator mode
+
+**Deployment**:
+
+-   Set up cloud-hosted matchmaking service
+-   Implement player accounts and progression
+
+## Conclusion <a name="conclusion"></a>
+
+This project represents a significant achievement in multiplayer game development. Starting with minimal Unity experience, I've created a complex networked combat system with robust matchmaking capabilities. Through persistent debugging and iterative development, I've gained deep understanding of Unity's multiplayer ecosystem. The project not only resulted in a functional PvP game but provided invaluable experience in system design and technical implementation that will serve as a foundation for future game development.
+
+## Screenshots <a name="screenshots"></a>
+
+| **Main Menu**                      | **Lobby System**                |
+| ---------------------------------- | ------------------------------- |
+| ![Main Menu](Preview/mainmenu.png) | ![Lobby](Preview/lobby.png)     |
+| Welcome screen with options        | Lobby interface showing players |
+
+| **Game World**                       | **Leaderboard**                         |
+| ------------------------------------ | --------------------------------------- |
+| ![Game World](Preview/gameworld.png) | ![Leaderboard](Preview/leaderboard.png) |
+| Platform-based combat arena          | Real-time player rankings               |
+
+## Game Controls <a name="game-controls"></a>
+
+**Keyboard Controls**:
+
+-   `A/D` or `←/→`: Move left/right
+-   `S` or `↓`: Fast fall
+-   `Space`: Jump
+-   `Left Shift`: Dash
+-   `Space` near wall: Wall jump
+-   `C`: Draw Sword
+-   `Z`: Punch/Sword Attack
+-   `X`: Kick
+-   `↓` + `X`: Dropkick
+-   `Esc`: Pause menu
