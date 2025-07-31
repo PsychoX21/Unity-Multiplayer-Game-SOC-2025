@@ -24,7 +24,7 @@ This repository contain both the unity project files along with the exported bui
 - KillStrike.rar: Compressed file for the exported game, can be played directly.
 - Project Files.zip: Contains the unity project files, open the folder in the unity game engine to view them completely
 
-## Video Link: [Final Project Video](https://drive.google.com/file/d/1tyWNMLhqRHEYJbr6KxhrBrnC0VKBdrbi/view?usp=sharing)
+## Video Link: [Final Project Video](https://drive.google.com/file/d/1jo1lKMNV_7upXnnGSoF0yc-qJwYb2Qff/view?usp=sharing)
 
 ## Key Features <a name="key-features"></a>
 
