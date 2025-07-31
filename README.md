@@ -3,18 +3,28 @@
 ## Table of Contents
 
 1. [Project Overview](#project-overview)
-2. [Key Features](#key-features)
-3. [Technical Implementation](#technical-implementation)
-4. [Learning Journey](#learning-journey)
-5. [Common Multiplayer Development Challenges](#common-multiplayer-development-challenges)
-6. [Future Work](#future-work)
-7. [Conclusion](#conclusion)
-8. [Screenshots](#screenshots)
-9. [Game Controls](#game-controls)
+2. [Repo Structure](#repo-structure)
+3. [Key Features](#key-features)
+4. [Technical Implementation](#technical-implementation)
+5. [Learning Journey](#learning-journey)
+6. [Common Multiplayer Development Challenges](#common-multiplayer-development-challenges)
+7. [Future Work](#future-work)
+8. [Conclusion](#conclusion)
+9. [Screenshots](#screenshots)
+10. [Game Controls](#game-controls)
 
 ## Project Overview <a name="project-overview"></a>
 
 This project is a multiplayer PvP melee combat game developed in Unity, featuring pixel art aesthetics and side-scroller gameplay. Set in a closed arena with multiple platforms, players engage in fast-paced combat using various moves including punches, kicks, dropkicks, and sword attacks. The game implements Unity's multiplayer services (Lobby, Relay) to facilitate online matchmaking and gameplay.
+
+## Repository Structure <a name="repo-structure"></a>
+
+This repository contain both the unity project files along with the exported build of the game.
+- Preview Folder: Contains screenshot of the game
+- KillStrike.rar: Compressed file for the exported game, can be played directly.
+- Project Files.zip: Contains the unity project files, open the folder in the unity game engine to view them completely
+
+## Video Link: [Final Project Video](https://drive.google.com/file/d/1tyWNMLhqRHEYJbr6KxhrBrnC0VKBdrbi/view?usp=sharing)
 
 ## Key Features <a name="key-features"></a>
 
